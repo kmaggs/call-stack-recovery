@@ -24,7 +24,7 @@ from prettytable import PrettyTable
 init()
 
 # Set program to one of ['sox', 'svg', 'tiff', 'ttf', 'wav', 'xml']
-program = 'sox'
+program = 'wav'
 
 ## a class object for Kolmogorov equivalence classes
 class Kclass:
@@ -389,3 +389,5 @@ fig.update_layout(
         'yanchor': 'top'},
     xaxis_title = "Probability Threshold")
 fig.show()
+
+fig.write_image("./" + program + "_precisionrecall.jpeg")
